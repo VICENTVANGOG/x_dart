@@ -1,15 +1,55 @@
 import 'package:flutter/material.dart';
 
-class pagina02 extends StatelessWidget {
-  const pagina02({super.key});
+void main() => runApp(const Home());
+
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Pagina 02"),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Material App',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Material App Bar'),
+        ),
+        body: const Center(
+          child: Text('Hello World'),
+        ),
+        bottomNavigationBar: const CustomBottomNavigationBar()
       ),
-      
+    );
+  }
+}
+
+class CustomBottomNavigationBar extends StatelessWidget {
+  const CustomBottomNavigationBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: '', 
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.search),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.mic),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.mic),
+          label: '',
+        ),BottomNavigationBarItem(
+          icon: Icon(Icons.mail),
+          label: '',
+        ),
+      ],
     );
   }
 }
