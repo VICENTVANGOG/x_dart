@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:x/pages/home.dart';
 
+
 void main() => runApp(MiApp());
 
 class MiApp extends StatelessWidget {
