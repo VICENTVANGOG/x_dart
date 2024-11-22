@@ -15,7 +15,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _paginaActual = 0;
 
-  List<Widget> _paginas = [paginahome(), paginasearch(), Grok()];
+  List<Widget> _paginas = [PaginaHome(), paginasearch(), Grok()];
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
           body: _paginas[_paginaActual],
           bottomNavigationBar: BottomNavigationBar(
             backgroundColor: Colors.black,
-            selectedItemColor: Colors.blue,
+            selectedItemColor: const Color.fromRGBO(33, 150, 243, 1),
             unselectedItemColor: Colors.white,
             showSelectedLabels: false,
             showUnselectedLabels: false,
