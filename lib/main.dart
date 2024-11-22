@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:x/pages/home.dart';
 
 
-void main() => runApp(MiApp());
+void main() => runApp(const MiApp());
 
 class MiApp extends StatelessWidget {
   const MiApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: "mi app",
       home: Inicio(),
     );
@@ -17,7 +17,7 @@ class MiApp extends StatelessWidget {
 }
 
 class Inicio extends StatefulWidget {
-  const Inicio({Key? key}) : super(key: key);
+  const Inicio({super.key});
 
   @override
   _InicioState createState() => _InicioState();
