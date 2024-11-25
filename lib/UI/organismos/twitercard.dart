@@ -105,7 +105,7 @@ class TwitterCard extends StatelessWidget {
                 IconButton(
                   icon: Icon(Icons.share, color: Colors.white),
                   onPressed: () {
-                    // Implementa la funcionalidad de compartir
+               
                   },
                 ),
               ],
