@@ -20,11 +20,11 @@ class PaginaHome extends StatelessWidget {
       },
      
       {
-        "username": "John Doe",
-        "userImage": "...", 
-        "tweetText": "...", 
+        "username": "encantador",
+        "userImage": "https://i.pinimg.com/236x/74/c0/b8/74c0b8e1e5b1ad34607cf7cbf97ad3bc.jpg", 
+        "tweetText": "ohhhh  me gustan los helados.", 
       "timestamp": "5 minutes ago",
-        "hashtags": ["pez", "dart", "fortnite"],
+        "hashtags": ["shrek", "dart", "helado"],
         "retweets": 10,
         "likes": 5,
       },
