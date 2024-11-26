@@ -15,18 +15,15 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _paginaActual = 0;
 
-  List<Widget> _paginas = [PaginaHome(), paginasearch(), Grok()];
+  List<Widget> _paginas = [TwitterApp(), paginasearch(), Grok()];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       
         debugShowCheckedModeBanner: false,
-        title: 'Material App',
         home: Scaffold(
-           backgroundColor: Colors.black,
           appBar: AppBar(
-            backgroundColor: Colors.black,
             title: Row(
               children: [
                 Container(
