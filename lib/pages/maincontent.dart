@@ -65,14 +65,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Image.network(
-          'https://logos-world.net/wp-content/uploads/2020/04/Twitter-Logo.png',
+          'https://w7.pngwing.com/pngs/748/680/png-transparent-twitter-x-logo.png',
           height: 30,
         ),
         centerTitle: true,
         leading: const Padding(
           padding: EdgeInsets.all(8.0),
           child: CircleAvatar(
-            backgroundImage: NetworkImage('https://placekitten.com/100/100'),
+            backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgmT9NtY_TP8_IIAV_pr5-t367EDVgVq_IcQ&s'),
           ),
         ),
       ),
@@ -118,7 +118,6 @@ class _HomePageState extends State<HomePage> {
         },
         child: const Icon(Icons.add),
       ),
-      
     );
   }
 

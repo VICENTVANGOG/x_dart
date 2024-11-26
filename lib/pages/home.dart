@@ -15,47 +15,16 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _paginaActual = 0;
 
-  List<Widget> _paginas = [TwitterApp(), paginasearch(), Grok()];
+  List<Widget> _paginas = [const TwitterApp(), paginasearch(), Grok()];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       
         debugShowCheckedModeBanner: false,
+        title: 'Material App',
         home: Scaffold(
-          appBar: AppBar(
-            title: Row(
-              children: [
-                Container(
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      image: NetworkImage(
-                          "https://lh3.googleusercontent.com/a/ACg8ocKILT0CSA30Au7_0zj3wlsxD3oKQ-3nnwur8l0-M8Fgu8qJuw=s288-c-no"),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  width: 50,
-                  height: 50,
-                  margin: EdgeInsets.all(8.0),
-                ),
-                Image.network(
-                  "https://pbs.twimg.com/media/F1zrsq8XsAUU7Lw?format=jpg&name=large",
-                  width: 150,
-                  height: 50,
-                  fit: BoxFit.contain,
-                ),
-              ],
-            ),
-            actions: [
-              IconButton(
-                icon: Icon(Icons.settings, color: Colors.white),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/settings');
-                },
-              ),
-            ],
-          ),
+           backgroundColor: Colors.black,
           body: _paginas[_paginaActual],
           bottomNavigationBar: BottomNavigationBar(
             backgroundColor: Colors.black,
