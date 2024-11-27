@@ -15,7 +15,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _paginaActual = 0;
 
-  final List<Widget> _paginas = [const HomePage(), const paginasearch(), const Grok()];
+  final List<Widget> _paginas = [const HomePage(), const PaginaSearch(), const NotificationsPage()];
 
   @override
   Widget build(BuildContext context) {
