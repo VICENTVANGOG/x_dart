@@ -99,7 +99,7 @@ class TwitterCard extends StatelessWidget {
                         const SizedBox(height: 12),
                         ClipRRect(
                           borderRadius: BorderRadius.circular(16),
-                          child: Image.network(
+                          child: Image.network( 
                             mediaUrl!,
                             fit: BoxFit.cover,
                           ),

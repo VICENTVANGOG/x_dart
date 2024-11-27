@@ -15,7 +15,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _paginaActual = 0;
 
-  List<Widget> _paginas = [const TwitterApp(), paginasearch(), Grok()];
+  final List<Widget> _paginas = [const TwitterApp(), const paginasearch(), const Grok()];
 
   @override
   Widget build(BuildContext context) {
