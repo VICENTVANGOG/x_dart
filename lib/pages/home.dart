@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:x/pages/grok.dart';
 import 'package:x/pages/maincontent.dart';
+import 'package:x/pages/mensaje.dart';
 import 'package:x/pages/search.dart';
 
 void main() => runApp(const Home());
@@ -15,7 +16,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _paginaActual = 0;
 
-  final List<Widget> _paginas = [const HomePage(), const PaginaSearch(), const NotificationsPage()];
+  final List<Widget> _paginas = [const HomePage(), const PaginaSearch(), const NotificationsPage(),const MessagesPage()];
 
   @override
   Widget build(BuildContext context) {

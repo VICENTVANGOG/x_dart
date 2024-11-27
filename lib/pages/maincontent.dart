@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
     {
       "username": "Movie ",
       "userHandle": "movie",
-      "userImage": "assets/img/icono.png",
+      "userImage": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.klipartz.com%2Fes%2Fsticker-png-fjuhl&psig=AOvVaw0TJTqaoXluRwirLGhfq5qk&ust=1732808188388000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjz1tXr_IkDFQAAAAAdAAAAABAR",
       "tweetText": "Ohhh, encantador puto",
       "timestamp": DateTime.now().subtract(const Duration(minutes: 5)),
       "hashtags": ["MovieNight", "CinemaAddict", "NoRegrets"],
