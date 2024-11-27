@@ -4,7 +4,7 @@ import 'package:timeago/timeago.dart' as timeago;
 class TwitterCard extends StatelessWidget {
   final String username;
   final String userHandle;
-  final String userImage;
+  final ImageProvider userImage;
   final String tweetText;
   final DateTime timestamp;
   final List<String> hashtags;
@@ -43,7 +43,10 @@ class TwitterCard extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 24,
-                  backgroundImage: NetworkImage(userImage),
+                  backgroundImage: userImage,
+                  onBackgroundImageError: (exception, stackTrace) {
+                    print('Error loading avatar image: $exception');
+                  },
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -99,9 +102,33 @@ class TwitterCard extends StatelessWidget {
                         const SizedBox(height: 12),
                         ClipRRect(
                           borderRadius: BorderRadius.circular(16),
-                          child: Image.network( 
+                          child: Image.network(
                             mediaUrl!,
                             fit: BoxFit.cover,
+                            loadingBuilder: (context, child, loadingProgress) {
+                              if (loadingProgress == null) return child;
+                              return Container(
+                                height: 200,
+                                color: Colors.grey[800],
+                                child: Center(
+                                  child: CircularProgressIndicator(
+                                    value: loadingProgress.expectedTotalBytes != null
+                                        ? loadingProgress.cumulativeBytesLoaded / loadingProgress.expectedTotalBytes!
+                                        : null,
+                                  ),
+                                ),
+                              );
+                            },
+                            errorBuilder: (context, error, stackTrace) {
+                              print('Error loading media image: $error');
+                              return Container(
+                                height: 200,
+                                color: Colors.grey[800],
+                                child: const Center(
+                                  child: Icon(Icons.error, color: Colors.white),
+                                ),
+                              );
+                            },
                           ),
                         ),
                       ],
