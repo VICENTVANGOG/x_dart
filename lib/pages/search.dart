@@ -8,6 +8,7 @@ class PaginaSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: Colors.black,
       ),
@@ -73,7 +74,7 @@ class PaginaSearch extends StatelessWidget {
                       const SizedBox(height: 16),
                       TextButton(
                         onPressed: () {
-                          // Add your change region logic here
+                          
                         },
                         style: TextButton.styleFrom(
                           foregroundColor: Colors.blue,
